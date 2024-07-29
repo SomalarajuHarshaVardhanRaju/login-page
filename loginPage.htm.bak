@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <title>Login Page</title>
+  <script>
+    function gtData()
+	{
+     // userC.style.
+	 alert("1");
+	 if(document.forms[0].uname.value==""&&
+	 document.forms[0].harsha.value==""&&
+	 document.forms[0].raju.value==""&&
+	 document.forms[0].pwd.value=="")
+		{
+			alert("2");
+			 alert("User Name is Required!...\nFrist Name is Required!.....\nLast Name is Required!.....\nPassword is Required!...");
+		}else if(document.forms[0].uname.value==""&&
+		 document.forms[0].harsha.value!=""&&
+		 document.forms[0].raju.value!=""&&
+		 document.forms[0].pwd.value!="")
+		{
+		 alert("Frist Name is Required!...");
+		}
+		else if(document.forms[0].uname.value!=""&&
+		 document.forms[0].harsha.value==""&&
+		 document.forms[0].raju.value!=""&&
+		 document.forms[0].pwd.value!="")
+		{
+		 alert("Last Name is Required!.....");
+	}
+		else if(document.forms[0].uname.value!=""&&
+		 document.forms[0].harsha.value!=""&&
+		 document.forms[0].raju.value==""&&
+		 document.forms[0].pwd.value!="")
+			 {
+			 }
+		 }
+
+	function cursorBlink()
+	{
+		 document.forms[0].uname.focus();
+	}
+	
+   
+    function chkEnter()
+	{
+		  if(event.keyCode=="13")
+		{
+			    gtData()
+	
+	}
+	}
+  </script>
+ </head>
+ <body bgcolor="green" onload="cursorBlink();">
+  <form>
+     <table align="center"> 
+	  <tr><td>User name</td><td><input type="text" name="uname" id="uname"  onkeypress="chkEnter();"></td></tr>
+	   <tr><td>Frist name</td><td><input type="text" name="harsha" id="harsha"  onkeypress="chkEnter();"></td></tr>
+	    <tr><td>Last name</td><td><input type="text" name="raju" id="raju"  onkeypress="chkEnter();"></td></tr>
+		<tr><td>Password</td><td><input type="password" name="pwd" id="pwd"  onkeypress="chkEnter();"></td></tr>
+					    <tr><td></td><td><input type="button" name="login" id="login" value="Login" onclick="gtData();"></td></tr>
+
+
+	  </table>
+  </form>
+ </body>
+</html>
